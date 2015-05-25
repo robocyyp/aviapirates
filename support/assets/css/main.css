@@ -60,7 +60,7 @@
 			background-image: url("../../images/icon.png");
 			background-position:  center;
 			background-size: cover;
-			border-radius: 100%;
+			/*border-radius: 100%;*/
 			color: white;
 			cursor: default;
 			display: inline-block;
