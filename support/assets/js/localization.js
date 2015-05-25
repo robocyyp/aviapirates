@@ -46,6 +46,26 @@ var localization = (function (lang) {
         return _getLocalizedName(_textWithMail);
     }());
 
+    _name={en:"Name", ru:"Имя"};
+    localizedStrings.name = (function () {
+        return _getLocalizedName(_name);
+    }());
+
+    _email={en:"Email", ru:"Почта"};
+    localizedStrings.email = (function () {
+        return _getLocalizedName(_email);
+    }());
+
+    _message={en:"Message", ru:"Сообщение"};
+    localizedStrings.message = (function () {
+        return _getLocalizedName(_message);
+    }());
+
+    _send={en:"Send message", ru:"Отправить"};
+    localizedStrings.send = (function () {
+        return _getLocalizedName(_send);
+    }());
+
     return localizedStrings; 
 }(_currentLocalizationLang));
 

@@ -39,7 +39,7 @@
 							<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 							<div class="12u$">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="special" /></li>
+									<li><input type="submit" id="submit" value="Send Message" class="special" /></li>
 								</ul>
 							</div>
 							<div>
@@ -92,6 +92,10 @@
 			$('.underHeaderName').html(localization.underHeader);
 			$('.question').html(localization.question);
 			$('.sendMailtext').html(localization.textWithMail);
+			$('#name').attr("placeholder",localization.name)
+			$('#email').attr("placeholder",localization.email);
+			$('#message').attr("placeholder",localization.message);
+			$('#submit').attr("value",localization.send);
 			
 			</script>
 
