@@ -32,7 +32,7 @@ var localization = (function (lang) {
     localizedStrings.header = (function () {
         return _getLocalizedName(_header);
     }());
-    _underHeader={en:"Aviapirates", ru:"Для тех, кто любит путешествовать"};
+    _underHeader={en:"For travel lovers", ru:"Для тех, кто любит путешествовать"};
     localizedStrings.underHeader = (function () {
         return _getLocalizedName(_underHeader);
     }());
