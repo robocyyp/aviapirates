@@ -33,7 +33,7 @@
 					<header class="major">
 						<h2 class="question">Ask for a question</h2>
 					</header>
-					<form method="post" >
+					<form >
 						<div class="row uniform">
 							<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
 							<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
@@ -129,6 +129,7 @@
 				    		}
 				    		else if(responseData.ErrorRus){
 				        		if(currentLocalizationLang() == "ru"){
+				        			$("#responseText p").html(responseData.ErrorRus); 
 				        		}
 				        		else{
 				        			$("#responseText p").html(responseData.ErrorEng); 
@@ -140,7 +141,7 @@
 				    	}
 				    },
 				    error: function (responseData, textStatus, errorThrown) {
-				        //alert('POST failed.');
+				        alert('POST failed.');
 				        //todo закоментить
 				    }
 				});
