@@ -43,6 +43,7 @@
 									<li><input type="submit" id="submit" value="Send Message" class="special" /></li>
 								</ul>
 							</div>
+							<div id="responseText"> <p >"Спасибо, мы записали!"</p></div>
 							<div>
 								<p class="sendMailtext"></p>
 							</div>
@@ -119,17 +120,20 @@
     				contentType: "application/json",
         			dataType: 'json',
 				    success: function(responseData, textStatus, jqXHR) {
-				        var value = responseData.Result;
-				        if(value){
 
-				        } else if(value.Error){
-				        	if(currentLocalizationLang() == "ru"){
-				        		alert (value.ErrorRus);
-				        	}
-				        	else{
-				        		alert (value.ErrorEng);
-				        	}
-				        }
+				    	if(responseData){
+				    		if(responseData.Result){
+				    			$("#responseText p").html(localisation.response);
+				    		}
+				    		else if(value.ErrorRus){
+				        		if(currentLocalizationLang() == "ru"){
+				        			
+				        		}
+				        		else{
+				        			$("#responseText p").html(value.ErrorEng); 
+				        		}
+				    		}
+				    	}
 				    },
 				    error: function (responseData, textStatus, errorThrown) {
 				        //alert('POST failed.');
