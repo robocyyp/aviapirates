@@ -85,9 +85,7 @@
                     window.location.reload();
                 }
             });
-			}
-
-			//set names of elements
+            //set names of elements
 			$('.headerName').html(localization.header);
 			$('.underHeaderName').html(localization.underHeader);
 			$('.question').html(localization.question);
@@ -96,10 +94,49 @@
 			$('#email').attr("placeholder",localization.email);
 			$('#message').attr("placeholder",localization.message);
 			$('#submit').attr("value",localization.send);
+			$('#submit').click(function() {
+			  sendMessage();
+			});
+			}
+
+			
+
+			function sendMessage(){
+					var textMessage = document.getElementsByName("message")[0].value;
+					var emailMessage = document.getElementsByName("email")[0].value;
+					var nameMessage = document.getElementsByName("name")[0].value;
+
+					$.ajax({
+    				type: 'POST',
+    				url: 'http://piratestwitter.cloudapp.net/Service.svc/message/send?sV=v1',
+    				crossDomain: true,
+    				data: JSON.stringify({
+					"Email": emailMessage,
+					"Name": nameMessage,
+					"Text": textMessage
+					}),
+    				contentType: "application/json",
+        			dataType: 'json',
+				    success: function(responseData, textStatus, jqXHR) {
+				        var value = responseData.Result;
+				        if(value){
+
+				        } else if(value.Error){
+				        	if(currentLocalizationLang() == "ru"){
+				        		alert (value.ErrorRus);
+				        	}
+				        	else{
+				        		alert (value.ErrorEng);
+				        	}
+				        }
+				    },
+				    error: function (responseData, textStatus, errorThrown) {
+				        alert('POST failed.');
+				        //todo закоментить
+				    }
+				});
+				};
 			
 			</script>
-
-
-
 	</body>
 </html>
