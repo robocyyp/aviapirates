@@ -33,17 +33,18 @@
 					<header class="major">
 						<h2 class="question">Ask for a question</h2>
 					</header>
-					<form method="post" action="#">
+					<form method="post" >
 						<div class="row uniform">
 							<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
 							<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
 							<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+							<div id="responseText" class="invisible red"> <p >Спасибо, мы записали!</p></div>
 							<div class="12u$">
 								<ul class="actions">
 									<li><input type="submit" id="submit" value="Send Message" class="special" /></li>
 								</ul>
 							</div>
-							<div id="responseText"> <p >"Спасибо, мы записали!"</p></div>
+							
 							<div>
 								<p class="sendMailtext"></p>
 							</div>
@@ -124,14 +125,17 @@
 				    	if(responseData){
 				    		if(responseData.Result){
 				    			$("#responseText p").html(localisation.response);
+				    			$("#responseText").removeClass("invisible red");
 				    		}
-				    		else if(value.ErrorRus){
+				    		else if(responseData.ErrorRus){
 				        		if(currentLocalizationLang() == "ru"){
-				        			
 				        		}
 				        		else{
-				        			$("#responseText p").html(value.ErrorEng); 
+				        			$("#responseText p").html(responseData.ErrorEng); 
 				        		}
+				        		$("#responseText")
+				        			.removeClass("invisible")
+				        			.addClass("red");
 				    		}
 				    	}
 				    },

@@ -66,9 +66,9 @@ var localization = (function (lang) {
         return _getLocalizedName(_send);
     }());
 
-    _send={en:"Thank you!", ru:"Спасибо, мы записали!"};
-    localizedStrings.send = (function () {
-        return _getLocalizedName(_send);
+    _response={en:"Thank you!", ru:"Спасибо, мы записали!"};
+    localizedStrings.response = (function () {
+        return _getLocalizedName(_response);
     }());
 
 
