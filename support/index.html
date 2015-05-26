@@ -41,7 +41,7 @@
 							<div id="responseText" class="invisible red"> <p >Спасибо, мы записали!</p></div>
 							<div class="12u$">
 								<ul class="actions">
-									<li><input type="submit" id="submit" value="Send Message" class="special" /></li>
+									<li><input type="submit1" id="submit" value="Send Message" class="special" /></li>
 								</ul>
 							</div>
 							
@@ -62,7 +62,8 @@
 			</section>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<!-- <script src="assets/js/jquery.min.js"></script>-->
+			<script src="assets/js/jquery.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/cookies.js"></script>
@@ -124,7 +125,7 @@
 
 				    	if(responseData){
 				    		if(responseData.Result){
-				    			$("#responseText p").html(localisation.response);
+				    			$("#responseText p").html(localization.response);
 				    			$("#responseText").removeClass("invisible red");
 				    		}
 				    		else if(responseData.ErrorRus){
