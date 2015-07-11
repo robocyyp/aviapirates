@@ -1,5 +1,4 @@
-@import url("font-awesome.min.css");
-@import url("http://fonts.googleapis.com/css?family=Raleway:400,400italic,700,800");
+
 
 /*
 	Highlights by HTML5 UP
@@ -1957,9 +1956,7 @@
 
 /* Form */
 
-	form {
-		margin: 0 0 2em 0;
-	}
+	
 
 	label {
 		color: #61686b;
@@ -2479,7 +2476,7 @@
 
 /* Button */
 
-	input[type="submit"],
+	input[type="submit1"],
 	input[type="reset"],
 	input[type="button"],
 	button,
@@ -2510,7 +2507,7 @@
 		white-space: nowrap;
 	}
 
-		input[type="submit"]:hover,
+		input[type="submit1"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		button:hover,
@@ -2519,7 +2516,7 @@
 			color: #61686b !important;
 		}
 
-		input[type="submit"]:active,
+		input[type="submit1"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		button:active,
@@ -2528,7 +2525,7 @@
 			color: #61686b !important;
 		}
 
-		input[type="submit"].icon,
+		input[type="submit1"].icon,
 		input[type="reset"].icon,
 		input[type="button"].icon,
 		button.icon,
@@ -2536,7 +2533,7 @@
 			padding-left: 1.35em;
 		}
 
-			input[type="submit"].icon:before,
+			input[type="submit1"].icon:before,
 			input[type="reset"].icon:before,
 			input[type="button"].icon:before,
 			button.icon:before,
@@ -2545,7 +2542,7 @@
 				margin-right: 0.5em;
 			}
 
-		input[type="submit"].fit,
+		input[type="submit1"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,
 		button.fit,
@@ -2555,7 +2552,7 @@
 			width: 100%;
 		}
 
-		input[type="submit"].small,
+		input[type="submit1"].small,
 		input[type="reset"].small,
 		input[type="button"].small,
 		button.small,
@@ -2563,7 +2560,7 @@
 			font-size: 0.8em;
 		}
 
-		input[type="submit"].big,
+		input[type="submit1"].big,
 		input[type="reset"].big,
 		input[type="button"].big,
 		button.big,
@@ -2571,7 +2568,7 @@
 			font-size: 1.35em;
 		}
 
-		input[type="submit"].special,
+		input[type="submit1"].special,
 		input[type="reset"].special,
 		input[type="button"].special,
 		button.special,
@@ -2582,7 +2579,7 @@
 			color: #ffffff !important;
 		}
 
-			input[type="submit"].special:hover,
+			input[type="submit1"].special:hover,
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			button.special:hover,
@@ -2590,7 +2587,7 @@
 				background-color: #9ed8b6;
 			}
 
-			input[type="submit"].special:active,
+			input[type="submit1"].special:active,
 			input[type="reset"].special:active,
 			input[type="button"].special:active,
 			button.special:active,
@@ -2598,7 +2595,7 @@
 				background-color: #7aca9a;
 			}
 
-			input[type="submit"].special.icon:before,
+			input[type="submit1"].special.icon:before,
 			input[type="reset"].special.icon:before,
 			input[type="button"].special.icon:before,
 			button.special.icon:before,
@@ -2606,7 +2603,7 @@
 				color: #d1ecdc;
 			}
 
-		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="submit1"].disabled, input[type="submit1"]:disabled,
 		input[type="reset"].disabled,
 		input[type="reset"]:disabled,
 		input[type="button"].disabled,
@@ -2775,7 +2772,7 @@
 /* Footer */
 
 	#footer {
-		min-height: 100vh;
+		/*min-height: 100vh;*/
 		padding: 0 0 12em 0;
 		position: relative;
 		text-align: center;
@@ -3017,7 +3014,7 @@
 
 		/* Button */
 
-			input[type="submit"],
+			input[type="submit1"],
 			input[type="reset"],
 			input[type="button"],
 			button,
@@ -3025,7 +3022,7 @@
 				padding: 0;
 			}
 
-				input[type="submit"].icon,
+				input[type="submit1"].icon,
 				input[type="reset"].icon,
 				input[type="button"].icon,
 				button.icon,
@@ -3061,3 +3058,26 @@
 				}
 
 	}
+
+	.invisible{
+		display: none;
+	}
+	.red{
+		color: rgb(255, 102, 102);
+	}
+
+	.lang{
+        cursor: pointer;
+    }
+
+    .lang.selected{
+            font-weight:bold;
+            cursor: default;
+    }
+
+.block {
+	display:  block !important;
+	padding: 0 2em 0 2em !important;
+	  margin: 15px;
+			}
+

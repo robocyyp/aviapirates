@@ -15,7 +15,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="assets/css/ie/respond.min.js"></script><![endif]-->
 	</head>
-	<body>
+	<body  onload="loadPage()">
 
 		<!-- Header -->
 			<section id="header">
@@ -26,7 +26,7 @@
 				</header>
 				<div class="container">
 					<ul class="actions">
-						<li><a href="#one" class="button special scrolly">Begin</a></li>
+						<li><a id="firstButton" href="#one" class="button special scrolly">Begin</a></li>
 					</ul>
 				</div>
 			</section>
@@ -37,9 +37,9 @@
 					<span class="image fit primary"><img src="images/pic01.jpg" alt="" /></span>
 					<div class="content">
 						<header class="major">
-							<h2>Who I am</h2>
+							<h2 id="headerOne"></h2>
 						</header>
-						<p>Aliquam ante ac id. Adipiscing interdum lorem praesent fusce pellentesque arcu feugiat. Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet integer vulputate phasellus lorem ipsum dolor lorem magna consequat sed etiam adipiscing interdum.</p>
+						<p id="textOne"></p>
 					</div>
 					<a href="#two" class="goto-next scrolly">Next</a>
 				</div>
@@ -51,16 +51,32 @@
 					<span class="image fit primary"><img src="images/pic02.jpg" alt="" /></span>
 					<div class="content">
 						<header class="major">
-							<h2>Stuff I do</h2>
+							<h2 id="headerTwo"></h2>
 						</header>
-						<p>Consequat sed ultricies rutrum. Sed adipiscing eu amet interdum lorem blandit vis ac commodo aliquet vulputate.</p>
+						<p id="textTwo"></p>
+						<ul class="actions">
+						<li class="block"><a  id="googlePlayBadge" href="https://play.google.com/store/apps/details?id=com.snaprix.pirates" class="badge"> 
+							<img alt="Get it on Google Play" 
+							src="images/Google_play_badge.png" />
+						</a></li>
+						<li class="block"><a id="appleStoreBadge" rel="leanModal" href="https://itunes.apple.com/ru/app/id993505238" class="badge">
+							<img alt="Get it on App Store" style = "height:60px;"
+							src="images/Apple_Store_badge.png" />
+						</a></li>
+						<li class="block"><a id="winPhoneBadge" rel="leanModal" href="https://www.windowsphone.com/en-us/store/app/авиапираты-фанаты-piratesru/43eb99b6-0f2b-43fe-9394-9acaba6c6ded" class="badge">
+							<img alt="Get it on App Store" style = "height:60px;"
+							src="images/Win_Phone_Badge.png" />
+						</a></li>
+						
+					</ul>
 						
 					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
+					<a href="#footer" class="goto-next scrolly">Next</a>
 				</div>
+				
 			</section>
 
-		<!-- Three -->
+		<!-- Three 
 			<section id="three" class="main special">
 				<div class="container">
 					<span class="image fit primary"><img src="images/pic03.jpg" alt="" /></span>
@@ -73,7 +89,7 @@
 					<a href="#footer" class="goto-next scrolly">Next</a>
 				</div>
 			</section>
-
+		-->
 		<!-- Four -->
 		<!--
 			<section id="four" class="main">
@@ -401,42 +417,135 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<section id="footer">
 				<div class="container">
 					<header class="major">
-						<h2>Get in touch</h2>
+						<h2 class="question">Ask for a question</h2>
 					</header>
-					<form method="post" action="#">
+					<form >
 						<div class="row uniform">
 							<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
 							<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
 							<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+							<div id="responseText" class="invisible red"> <p >Спасибо, мы записали!</p></div>
 							<div class="12u$">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="special" /></li>
+									<li><input type="submit1" id="submit" value="Send Message" class="special" /></li>
 								</ul>
 							</div>
+							
+							<div>
+								<p class="sendMailtext"></p>
+							</div>
 						</div>
+
 					</form>
 				</div>
 				<footer>
-					<ul class="icons">
-						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon alt fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
+					
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Demo Images: <a href="http://unsplash.com">Unsplash</a></li>
+						<li>&copy; Snaprix 2015</li><li _id="ru" class="lang selected">Русский</li><li _id="en" class="lang ">English</li>
 					</ul>
+
 				</footer>
 			</section>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/cookies.js"></script>
+			<script src="assets/js/localization.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+			function loadPage(){
+				
+				            // сначала проверим в кукисах значение
+            $('.lang').removeClass('selected');
+            $('.lang[_id="' + currentLocalizationLang() + '"]').addClass('selected');
+
+			$('.lang').click(function () {
+                if ($(this).hasClass('selected') == true) {
+                    return;
+                } else {
+                    $('.lang').removeClass('selected');
+                    $(this).addClass('selected');
+                    setCookie('lang', $(this).attr('_id'), { expires: 20000000 });
+                    window.location.reload();
+                }
+            });
+            //set names of elements
+			$('.headerName').html(localization.header);
+			$('.underHeaderName').html(localization.underHeader);
+
+			
+			$('#firstButton').html(localization.firstButton);
+			$('#headerOne').html(localization.headerOne);
+			$('#textOne').html(localization.textOne);
+			$('#headerTwo').html(localization.headerTwo);
+			$('#textTwo').html(localization.textTwo);
+
+			$('.question').html(localization.question);
+			$('.sendMailtext').html(localization.textWithMail);
+			$('#name').attr("placeholder",localization.name)
+			$('#email').attr("placeholder",localization.email);
+			$('#message').attr("placeholder",localization.message);
+			$('#submit').attr("value",localization.send);
+
+			
+
+			
+
+			$('#submit').click(function() {
+			  sendMessage();
+			});
+			}
+
+			
+
+			function sendMessage(){
+					var textMessage = document.getElementsByName("message")[0].value;
+					var emailMessage = document.getElementsByName("email")[0].value;
+					var nameMessage = document.getElementsByName("name")[0].value;
+
+					$.ajax({
+    				type: 'POST',
+    				url: 'http://piratestwitter.cloudapp.net/Service.svc/message/send?sV=v1',
+    				crossDomain: true,
+    				data: JSON.stringify({
+					"Email": emailMessage,
+					"Name": nameMessage,
+					"Text": textMessage
+					}),
+    				contentType: "application/json",
+        			dataType: 'json',
+				    success: function(responseData, textStatus, jqXHR) {
+
+				    	if(responseData){
+				    		if(responseData.Result){
+				    			$("#responseText p").html(localization.response);
+				    			$("#responseText").removeClass("invisible red");
+				    		}
+				    		else if(responseData.ErrorRus){
+				        		if(currentLocalizationLang() == "ru"){
+				        			$("#responseText p").html(responseData.ErrorRus); 
+				        		}
+				        		else{
+				        			$("#responseText p").html(responseData.ErrorEng); 
+				        		}
+				        		$("#responseText")
+				        			.removeClass("invisible")
+				        			.addClass("red");
+				    		}
+				    	}
+				    },
+				    error: function (responseData, textStatus, errorThrown) {
+				        alert('POST failed.');
+				        //todo закоментить
+				    }
+				});
+				};
+			
+			</script>
 	</body>
 </html>
