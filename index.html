@@ -511,20 +511,20 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 
 			var linkG = document.getElementById('googlePlayBadge');
-				analytics.trackLink(link, 'site_link', {
+				analytics.trackLink(linkG, 'site_link', {
 					  object: 'play_store',
 					  type: 'click'
 					});
-				var linkG = document.getElementById('appleStoreBadge');
-				analytics.trackLink(link, 'site_link', {
-					  object: 'app_store',
-					  type: 'click'
-					});
-				var linkG = document.getElementById('winPhoneBadge');
-				analytics.trackLink(link, 'site_link', {
-					  object: 'windows_store',
-					  type: 'click',
-					});
+			var linkA = document.getElementById('appleStoreBadge');
+			analytics.trackLink(linkA, 'site_link', {
+				  object: 'app_store',
+				  type: 'click'
+				});
+			var linkW = document.getElementById('winPhoneBadge');
+			analytics.trackLink(linkW, 'site_link', {
+				  object: 'windows_store',
+				  type: 'click',
+				});
 			}
 
 			
