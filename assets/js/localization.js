@@ -83,7 +83,8 @@ var localization = (function (lang) {
     localizedStrings.headerOne = (function () {
         return _getLocalizedName(_headerOne);
     }());
-    _textOne={en:"Push notifications", ru:"Приложение отсылает уведомления"};
+    _textOne={en:"Fly often? Love to travel? Looking for for best fares? Aviapirates will help you to get best deals on airline tickets. Turn on notifications and stay tuned. \nIf you like to travel as much as we do - you will definitely love this app! \nNo ads. No in-app puschases. Just great offers.", 
+    ru:"Авиапираты позволяют узнавать о самых выгодных предложениях авиакомпаний и приобретать билеты по самым привлекательным ценам. \nАктивируйте уведомления и получайте отличные предложения."};
     localizedStrings.textOne = (function () {
         return _getLocalizedName(_textOne);
     }());
@@ -94,7 +95,7 @@ var localization = (function (lang) {
     }());
 
     _textTwo={en:"We have developed an application for all popular platforms, so you can get notifications immediately", 
-    ru:"Мы сделали приложение на все популярные платформы, чтобы вы могли всегда получать предложения мгновенно"};
+    ru:"Мы сделали приложение на все популярные платформы, чтобы вы могли получать уведомления мгновенно"};
     localizedStrings.textTwo = (function () {
         return _getLocalizedName(_textTwo);
     }());

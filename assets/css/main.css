@@ -138,6 +138,12 @@
 			width: 35em;
 		}
 
+		.pic{
+		display: inline-block;
+		margin-left: 15px;
+		height: 356px;
+		width: 200px;
+		}
 	}
 
 	@media screen and (max-width: 980px) {
@@ -162,6 +168,12 @@
 
 		.container {
 			width: 80%;
+		}
+		.pic{
+		display: inline-block;
+		margin-left: 5%;
+		height: 356px;
+		width: 200px;
 		}
 
 	}
@@ -189,6 +201,13 @@
 		.container {
 			width: 80%;
 		}
+		.pic{
+		display: inline-block;
+		
+		margin-left: 1%;
+		height: 281px;
+		width: 158px;
+		}
 
 	}
 
@@ -214,6 +233,13 @@
 
 		.container {
 			width: 100%;
+		}
+		.pic{
+		display: inline-block;
+		
+		margin-left: 1%;
+		height: 281px;
+		width: 158px;
 		}
 
 	}
@@ -3080,4 +3106,24 @@
 	padding: 0 2em 0 2em !important;
 	  margin: 15px;
 			}
+
+
+
+
+/*
+.pic1{
+		background-image: url("../../images/screen1.jpeg") ;
+		background-size: cover;
+	}
+.pic2{
+		background-image: url("./../images/screen2.jpeg") ;
+		background-size: cover;
+	}
+
+/*.pic3{
+		background-image: url("images/screen3.jpeg") ;
+		background-size: cover;
+	}
+*/
+
 
