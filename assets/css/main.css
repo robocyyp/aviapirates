@@ -236,10 +236,23 @@
 		}
 		.pic{
 		display: inline-block;
-		
+		margin-top: 10px;
 		margin-left: 1%;
 		height: 281px;
 		width: 158px;
+		}
+
+	}
+
+	@media screen and (max-width: 400px) {
+
+	
+		.pic{
+		display: inline-block;
+		margin-top: 10px;
+		margin-left: 1%;
+		height: 480px;
+		width: 270px;
 		}
 
 	}
