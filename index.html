@@ -72,8 +72,21 @@
 						</a></li>
 						
 					</ul>
-						
+					
+					<p id="textDonate"  class="donateHalfMargin"></p>	
 					</div>
+					
+					<input id="donateInput" type="number" value="300" / min="0" width="150"> <span id="currency">Руб.</span>
+
+					<p id="firstDonateButton" class="donateZeroMargin"></p>	
+					
+							<iframe id="frameWallet" class="donate-frame" frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/small.xml?account=41001555962611&quickpay=small&yamoney-payment-type=on&button-text=06&button-size=l&button-color=orange&targets=%D0%9F%D0%BE%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BD%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+Aviapirates&mail=on&successURL=&default-sum=300" width="261" height="54"></iframe>
+					<p id="secondDonateButton" class="donateZeroMargin"></p>	
+
+							<iframe id="frameCard" class="donate-frame" frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/small.xml?account=41001555962611&quickpay=small&any-card-payment-type=on&button-text=06&button-size=l&button-color=orange&targets=%D0%9F%D0%BE%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BD%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+Aviapirates&mail=on&successURL=&default-sum=300" width="261" height="54"></iframe>
+					
+				
+
 					<a href="#footer" class="goto-next scrolly">Next</a>
 				</div>
 				
@@ -470,66 +483,106 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script>
 			function loadPage(){
 				
-				            // сначала проверим в кукисах значение
-            $('.lang').removeClass('selected');
-            $('.lang[_id="' + currentLocalizationLang() + '"]').addClass('selected');
+					            // сначала проверим в кукисах значение
+	            $('.lang').removeClass('selected');
+	            $('.lang[_id="' + currentLocalizationLang() + '"]').addClass('selected');
 
-			$('.lang').click(function () {
-                if ($(this).hasClass('selected') == true) {
-                    return;
-                } else {
-                    $('.lang').removeClass('selected');
-                    $(this).addClass('selected');
-                    setCookie('lang', $(this).attr('_id'), { expires: 20000000 });
-                    window.location.reload();
-                }
-            });
-            //set names of elements
-			$('.headerName').html(localization.header);
-			$('.underHeaderName').html(localization.underHeader);
+				$('.lang').click(function () {
+	                if ($(this).hasClass('selected') == true) {
+	                    return;
+	                } else {
+	                    $('.lang').removeClass('selected');
+	                    $(this).addClass('selected');
+	                    setCookie('lang', $(this).attr('_id'), { expires: 20000000 });
+	                    window.location.reload();
+	                }
+	            });
+	            //set names of elements
+				$('.headerName').html(localization.header);
+				$('.underHeaderName').html(localization.underHeader);
 
-			
-			$('#firstButton').html(localization.firstButton);
-			$('#headerOne').html(localization.headerOne);
-			$('#textOne').html(localization.textOne);
-			$('#headerTwo').html(localization.headerTwo);
-			$('#textTwo').html(localization.textTwo);
+				
+				$('#firstButton').html(localization.firstButton);
+				$('#headerOne').html(localization.headerOne);
+				$('#textOne').html(localization.textOne);
+				$('#headerTwo').html(localization.headerTwo);
+				$('#textTwo').html(localization.textTwo);
 
-			$('.question').html(localization.question);
-			$('.sendMailtext').html(localization.textWithMail);
-			$('#name').attr("placeholder",localization.name)
-			$('#email').attr("placeholder",localization.email);
-			$('#message').attr("placeholder",localization.message);
-			$('#submit').attr("value",localization.send);
+				$('#textDonate').html(localization.textDonate);
+				$('#firstDonateButton').html(localization.firstDonateButton);
+				$('#secondDonateButton').html(localization.secondDonateButton);
+				$('#currency').html(localization.currency);
+				
 
-			$('#submit').click(function() {
-			  
-			  analytics.track('site_send_message', {
-						object: 'button',
-					  	type: 'click'
-					});
-			  sendMessage();
-			});
+				$('.question').html(localization.question);
+				$('.sendMailtext').html(localization.textWithMail);
+				$('#name').attr("placeholder",localization.name)
+				$('#email').attr("placeholder",localization.email);
+				$('#message').attr("placeholder",localization.message);
+				$('#submit').attr("value",localization.send);
+
+				$('#submit').click(function() {
+				  
+				  analytics.track('site_send_message', {
+							object: 'button',
+						  	type: 'click'
+						});
+				  sendMessage();
+				});
 
 
-			var linkG = document.getElementById('googlePlayBadge');
-				analytics.trackLink(linkG, 'site_link', {
-					  object: 'play_store',
+				var linkG = document.getElementById('googlePlayBadge');
+					analytics.trackLink(linkG, 'site_link', {
+						  object: 'play_store',
+						  type: 'click'
+						});
+				var linkA = document.getElementById('appleStoreBadge');
+				analytics.trackLink(linkA, 'site_link', {
+					  object: 'app_store',
 					  type: 'click'
 					});
-			var linkA = document.getElementById('appleStoreBadge');
-			analytics.trackLink(linkA, 'site_link', {
-				  object: 'app_store',
-				  type: 'click'
-				});
-			var linkW = document.getElementById('winPhoneBadge');
-			analytics.trackLink(linkW, 'site_link', {
-				  object: 'windows_store',
-				  type: 'click',
-				});
-			}
+				var linkW = document.getElementById('winPhoneBadge');
+				analytics.trackLink(linkW, 'site_link', {
+					  object: 'windows_store',
+					  type: 'click',
+					});
+				
 
-			
+
+				$('#donateInput').on('change', function() {
+
+					var value = $('#donateInput').attr("value");
+	  				if(!$.isNumeric(value)){
+	  					value = 300;
+	  					 $('#donateInput').attr("value", 300);
+	  				}
+
+	  				srcC = "https://money.yandex.ru/embed/small.xml?account=41001555962611&quickpay=small&any-card-payment-type=on&button-text=06&button-size=l&button-color=orange&targets=%D0%9F%D0%BE%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BD%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+Aviapirates&mail=on&successURL=&default-sum="+value;
+					$('#frameCard').attr("src",srcC);
+
+					srcW = "https://money.yandex.ru/embed/small.xml?account=41001555962611&quickpay=small&yamoney-payment-type=on&button-text=06&button-size=l&button-color=orange&targets=%D0%9F%D0%BE%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BD%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+Aviapirates&mail=on&successURL=&default-sum="+value;
+					$('#frameWallet').attr("src",srcW);
+
+				});
+
+				$('#frameCard').on('click', function() {
+	  				
+
+
+	  				analytics.track('site_donate_click', {
+					  object: 'credit_card',
+					  type: 'click'
+					});
+				});
+				$('#frameWallet').on('click', function() {
+	  			
+	  				analytics.track('site_donate_click', {
+					  object: 'wallet',
+					  type: 'click'
+					});
+				});
+
+			};
 
 			function sendMessage(){
 					var textMessage = document.getElementsByName("message")[0].value;

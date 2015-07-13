@@ -149,6 +149,7 @@
 			padding: 0 2em 0 2em !important;
 			margin: 15px;
 		}
+		
 	}
 
 	@media screen and (max-width: 980px) {
@@ -3141,6 +3142,25 @@
 .block {
 	display:  block !important;
 	}
+
+.donateZeroMargin {
+	margin:0;
+}
+.donateHalfMargin {
+	margin:0 0 1em 0;
+}
+#donateInput{
+	width: 140px;
+  font-size: 20pt;
+  text-align: center;
+  margin: 0 0 0.5em 0;
+}
+#currency{
+	
+  font-size: 20pt;
+  margin: 0 0 0.5em 0.5em;
+  
+}
 
 
 

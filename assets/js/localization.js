@@ -100,6 +100,32 @@ var localization = (function (lang) {
         return _getLocalizedName(_textTwo);
     }());
 
+    _textDonate={en:"Our app is absolutely free, but you can donate money on the development of the project.", 
+    ru:"Приложение абсолютно бесплатное, однако если вы хотите нас поддержать - воспользуйтесь одной из кнопок :)"};
+    localizedStrings.textDonate = (function () {
+        return _getLocalizedName(_textDonate);
+    }());
+
+    _firstDonateButton={en:"with Yandex.Money wallet", 
+    ru:"через кошелек Яндекс.Деньги"};
+    localizedStrings.firstDonateButton = (function () {
+        return _getLocalizedName(_firstDonateButton);
+    }());
+
+    _secondDonateButton={en:"or with credit card", 
+    ru:"или банковской картой"};
+    localizedStrings.secondDonateButton = (function () {
+        return _getLocalizedName(_secondDonateButton);
+    }());
+
+    _currency={en:"Rubl.", 
+    ru:"Руб."};
+    localizedStrings.currency = (function () {
+        return _getLocalizedName(_currency);
+    }());
+
+    
+
     return localizedStrings; 
 }(_currentLocalizationLang));
 
