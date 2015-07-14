@@ -2112,14 +2112,16 @@
 
 	input[type="checkbox"],
 	input[type="radio"] {
-		-moz-appearance: none;
+		/*-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
-		appearance: none;
-		display: block;
+		appearance: none; 
 		float: left;
 		margin-right: -2em;
 		opacity: 0;
+		display: block;
+		*/
+		
 		width: 1em;
 		z-index: -1;
 	}
@@ -3163,7 +3165,110 @@
 }
 
 
+.b-button {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  margin: 0 15px 0 0;
+  outline: medium none;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  vertical-align: middle;
+}
 
+.b-widget-button .b-button {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: url("images/button_sprite.png");
+  background-origin: padding-box;
+  background-position: 0 -259px;
+  background-repeat: repeat-x;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 1px 3px #999;
+  height: 48px;
+  margin: 10px 3px 4px;
+}
+.b-widget-button__icon_type_any-card {
+  left: 12px;
+}
+
+
+
+.b-widget-button .b-button .b-button__inner {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: url("images/button_sprite.png");
+  background-origin: padding-box;
+  background-position: 0 -36px;
+  background-repeat: repeat-x;
+  border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #ef6021;
+  border-radius: 0 5px 5px 0;
+  border-style: none none none solid;
+  border-width: medium medium medium 1px;
+  border-left: 1px solid #ef6021;
+  color: #fff;
+  font-size: 25px;
+  height: 100%;
+  line-height: 47px;
+  margin-left: 60px;
+  padding: 0 25px;
+  text-shadow: -1px -1px 1px #f16a2a;
+}
+.b-widget-button_orange .b-button .b-button__inner {
+  border-left: 1px solid #e6c844;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+  color: #000;
+}
+
+.b-button__input {
+  border: 0 none;
+  cursor: pointer;
+  font-size: 0;
+  height: 100%;
+  left: 0;
+  line-height: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  padding: 0;
+  position: absolute;
+  text-indent: -999px;
+  top: 0;
+  width: 100%;
+}
+
+.b-widget-button__icon {
+  height: 29px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+}
+
+.b-button__inner {
+  background: #fff url("/images/button_sprite.png") repeat-x scroll 0 -228px transparent;
+  border: 1px solid #b4b4b4;
+  border-radius: 3px 3px 3px 3px;
+  display: block;
+  font-family: Arial,Geneva CY,Sans-Serif;
+  font-size: 13px;
+  height: 23px;
+  line-height: 23px;
+  margin: 0;
+  outline: medium none;
+  padding: 0 15px;
+  position: relative;
+  white-space: nowrap;
+}
 
 /*
 .pic1{
